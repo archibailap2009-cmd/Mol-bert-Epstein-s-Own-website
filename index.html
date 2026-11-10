@@ -4,349 +4,281 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mol’bert Epstein</title>
-  <meta name="description" content="Mol’bert Epstein — editorial website.">
-  <meta name="theme-color" content="#f3f0e8">
-
+  <meta name="description" content="Website dedicated to Mol’bert Epstein">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Иконки (спрайт). Цвет берётся из currentColor -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-    <symbol id="i-arrow-ur" viewBox="0 0 24 24"><path d="M17 17V7H7M17 7 7 17" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
-    <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
-    <symbol id="i-arrow-up" viewBox="0 0 18 18"><path d="M14.25 9 9 3.75 3.75 9M9 3.75v10.5" fill="none" stroke="currentColor" stroke-linecap="round"/></symbol>
-    <symbol id="i-asterisk" viewBox="0 0 140 140"><path d="M70 35v70M100.31 52.5 39.69 87.5M39.69 52.5l60.62 35" fill="none" stroke="currentColor" stroke-linecap="round" vector-effect="non-scaling-stroke"/></symbol>
-  </svg>
+<!-- SVG-иконки (рисуются кодом, картинки не нужны) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-asterisk" viewBox="0 0 100 100"><g stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"><path d="M50 0V100M6.7 25L93.3 75M6.7 75L93.3 25" vector-effect="non-scaling-stroke"/></g></symbol>
+  <symbol id="i-arrow-ur" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-arrow-d" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-arrow-u" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
 
-  <!-- ============ 1. COVER ============ -->
-  <header class="nav wrap" id="top">
-    <a class="nav__brand" href="#top">Mol’bert Epstein</a>
+<!-- ============ 1. COVER ============ -->
+<header class="cover" id="top">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="wordmark" href="#top">Mol’bert Epstein</a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#intro">Lorem</a></li>
+        <li><a href="#portrait">Ipsum</a></li>
+        <li><a href="#archive">Dolor</a></li>
+        <li><a href="#journal">Sit amet</a></li>
+        <li class="nav__about-mobile"><a href="#about">About us</a></li>
+      </ul>
+      <a class="nav__action label" href="#about">About us <svg class="ico"><use href="#i-arrow-ur"/></svg></a>
+      <button class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    </nav>
+    <hr class="rule">
 
-    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu">
-      <span class="nav__toggle-bars" aria-hidden="true"></span>
-      <span class="visually-hidden">Menu</span>
-    </button>
-
-    <div class="nav__menu" id="menu">
-      <nav class="nav__links" aria-label="Main">
-        <a href="#about">Lorem</a>
-        <a href="#essay">Ipsum</a>
-        <a href="#chapters">Dolor</a>
-        <a href="#archive">Sit amet</a>
-      </nav>
-      <a class="nav__action label" href="#subscribe">About us <svg class="icon"><use href="#i-arrow-ur"/></svg></a>
+    <div class="cover__meta label">
+      <span>Lorem ipsum / dolor sit amet</span>
+      <span>Consectetur adipiscing elit</span>
     </div>
-  </header>
 
-  <main>
-    <section class="cover wrap" aria-labelledby="cover-title">
-      <hr class="rule">
+    <h1 class="cover__name">Mol’bert Epstein</h1>
 
-      <div class="cover__meta label">
-        <span>Lorem ipsum / dolor sit amet</span>
-        <span>Consectetur adipiscing elit</span>
+    <div class="cover__stage">
+      <div class="cover__intro">
+        <p class="label">Lorem ipsum dolor</p>
+        <p class="cover__statement">Lorem ipsum,<br>dolor sit amet.</p>
+        <p class="muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+        <a class="round-btn" href="#intro" aria-label="Scroll down"><svg class="ico"><use href="#i-arrow-d"/></svg></a>
       </div>
 
-      <h1 class="cover__name" id="cover-title"><span>Mol’bert</span> <span>Epstein</span></h1>
-
-      <div class="stage">
-        <div class="stage__photo">
-          <span class="stage__halo" aria-hidden="true"></span>
-          <svg class="stage__asterisk" aria-hidden="true"><use href="#i-asterisk"/></svg>
-          <img class="stage__img" src="assets/img/cover-portrait.png" alt="Portrait of Mol’bert Epstein">
-        </div>
-
-        <div class="stage__intro" id="intro">
-          <p class="label">Lorem ipsum dolor</p>
-          <p class="stage__statement">Lorem ipsum,<br>dolor sit amet.</p>
-          <p class="stage__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
-          <a class="round-btn" href="#about" aria-label="Scroll down"><svg class="icon"><use href="#i-arrow-down"/></svg></a>
-        </div>
-
-        <aside class="stage__note">
-          <svg class="stage__note-mark" aria-hidden="true"><use href="#i-asterisk"/></svg>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-          <span class="stage__note-rule" aria-hidden="true"></span>
-          <p class="label">Lorem ipsum</p>
-        </aside>
-
-        <div class="stage__footer">
-          <span class="label">Lorem ipsum — dolor sit</span>
-          <span class="caption">Lorem ipsum dolor sit amet.</span>
-        </div>
+      <div class="cover__portrait">
+        <svg class="star star--cover accent" aria-hidden="true"><use href="#i-asterisk"/></svg>
+        <div class="halo"></div>
+        <div class="photo cover__photo"><img src="assets/img/cover-portrait.png" alt="Mol’bert Epstein"></div>
       </div>
-    </section>
 
-    <!-- ============ 2. BIOGRAPHY INTRO ============ -->
-    <section class="bio wrap" id="about">
-      <hr class="rule">
-      <div class="bio__grid">
-        <div class="bio__margin">
-          <p class="label">Lorem / ipsum</p>
-          <svg class="bio__mark" aria-hidden="true"><use href="#i-asterisk"/></svg>
-        </div>
-        <div class="bio__prose">
-          <h2 class="bio__headline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</h2>
-          <div class="bio__details">
-            <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a class="link" href="#essay"><span>Lorem ipsum</span><svg class="icon"><use href="#i-arrow-ur"/></svg></a>
-          </div>
+      <aside class="cover__note">
+        <svg class="star accent" width="50" height="50" aria-hidden="true"><use href="#i-asterisk"/></svg>
+        <p class="muted small">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+        <hr class="rule rule--short">
+        <p class="label">Lorem ipsum</p>
+      </aside>
+
+      <div class="cover__foot">
+        <span class="label">Lorem ipsum — dolor sit</span>
+        <span class="muted small">Lorem ipsum dolor sit amet.</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ 2. BIOGRAPHY INTRO ============ -->
+<section class="intro" id="intro">
+  <div class="wrap">
+    <hr class="rule">
+    <div class="intro__cols">
+      <div class="intro__margin">
+        <p class="label">Lorem / ipsum</p>
+        <svg class="star accent" width="72" height="72" aria-hidden="true"><use href="#i-asterisk"/></svg>
+      </div>
+      <div class="intro__prose">
+        <h2 class="intro__headline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</h2>
+        <div class="intro__details">
+          <p class="muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a class="link" href="#portrait">Lorem ipsum <svg class="ico"><use href="#i-arrow-ur"/></svg></a>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- ============ 3. PORTRAIT ESSAY ============ -->
-    <section class="essay" id="essay">
-      <div class="essay__inner">
-        <figure class="essay__figure">
-          <span class="essay__backdrop" aria-hidden="true"></span>
-          <img class="essay__img" src="assets/img/portrait-smile.png" alt="Smiling portrait of Mol’bert Epstein">
-          <figcaption class="essay__caption">
-            <span class="label">Lorem ipsum dolor</span>
-            <span class="caption">Consectetur adipiscing.</span>
-          </figcaption>
-        </figure>
+<!-- ============ 3. PORTRAIT ESSAY ============ -->
+<section class="essay" id="portrait">
+  <div class="essay__art">
+    <div class="essay__frame">
+      <div class="essay__backdrop"></div>
+      <div class="photo essay__photo"><img src="assets/img/portrait-smile.png" alt="Portrait"></div>
+    </div>
+    <div class="caption label"><span>Lorem ipsum dolor</span><span class="muted caption__note">Consectetur adipiscing.</span></div>
+  </div>
+  <div class="essay__text">
+    <p class="label">Lorem ipsum dolor sit</p>
+    <h2 class="essay__title">Lorem ipsum.<br>Dolor sit<br>amet.</h2>
+    <p class="muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p class="muted">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    <a class="link" href="#chapters">Lorem ipsum dolor <svg class="ico"><use href="#i-arrow-ur"/></svg></a>
+  </div>
+</section>
 
-        <div class="essay__text">
-          <p class="label">Lorem ipsum dolor sit</p>
-          <h2 class="essay__title">Lorem ipsum.<br>Dolor sit<br>amet.</h2>
-          <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <p class="body">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-          <a class="link" href="#chapters"><span>Lorem ipsum dolor</span><svg class="icon"><use href="#i-arrow-ur"/></svg></a>
-        </div>
+<!-- ============ 4. LIFE CHAPTERS ============ -->
+<section class="chapters" id="chapters">
+  <div class="wrap chapters__grid">
+    <div class="chapters__head">
+      <p class="label">Lorem / ipsum</p>
+      <h2 class="chapters__title">Lorem ipsum dolor sit.</h2>
+      <p class="muted small">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do.</p>
+    </div>
+    <ol class="chapters__list">
+      <li><a class="chapter" href="#">
+        <span class="label">01</span>
+        <span class="chapter__copy"><span class="chapter__h">Lorem ipsum dolor sit amet</span><span class="muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</span></span>
+        <svg class="ico"><use href="#i-arrow-ur"/></svg></a></li>
+      <li><a class="chapter" href="#">
+        <span class="label">02</span>
+        <span class="chapter__copy"><span class="chapter__h">Consectetur adipiscing elit</span><span class="muted">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</span></span>
+        <svg class="ico"><use href="#i-arrow-ur"/></svg></a></li>
+      <li><a class="chapter" href="#">
+        <span class="label">03</span>
+        <span class="chapter__copy"><span class="chapter__h">Sed do eiusmod tempor</span><span class="muted">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</span></span>
+        <svg class="ico"><use href="#i-arrow-ur"/></svg></a></li>
+      <li><a class="chapter" href="#">
+        <span class="label">04</span>
+        <span class="chapter__copy"><span class="chapter__h">Incididunt ut labore</span><span class="muted">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</span></span>
+        <svg class="ico"><use href="#i-arrow-ur"/></svg></a></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ 5. QUOTATION ============ -->
+<section class="quote">
+  <div class="wrap quote__grid">
+    <blockquote class="quote__body">
+      <span class="quote__mark" aria-hidden="true">“</span>
+      <p class="quote__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+      <footer class="label">Lorem ipsum — dolor sit</footer>
+    </blockquote>
+    <div class="quote__art">
+      <div class="halo halo--quote"></div>
+      <div class="photo quote__photo"><img src="assets/img/seated.png" alt="Seated portrait"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. PHOTO ARCHIVE ============ -->
+<section class="archive" id="archive">
+  <div class="wrap">
+    <div class="archive__head">
+      <div>
+        <p class="label">Lorem / ipsum</p>
+        <h2 class="archive__title">Lorem ipsum dolor sit amet</h2>
       </div>
-    </section>
+      <a class="link" href="#">Lorem ipsum <svg class="ico"><use href="#i-arrow-ur"/></svg></a>
+    </div>
 
-    <!-- ============ 4. LIFE CHAPTERS ============ -->
-    <section class="chapters wrap" id="chapters">
-      <div class="chapters__head">
-        <p class="label">Lorem ipsum / dolor</p>
-        <h2 class="chapters__title">Lorem,<br>ipsum<br>&amp; dolor.</h2>
-        <p class="chapters__intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-
-      <ol class="chapters__list">
-        <li>
-          <a class="chapter" href="#">
-            <span class="chapter__marker">Lorem</span>
-            <span class="chapter__copy">
-              <span class="chapter__heading">Lorem ipsum dolor</span>
-              <span class="chapter__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
-            </span>
-            <svg class="icon chapter__arrow" aria-hidden="true"><use href="#i-arrow-ur"/></svg>
-          </a>
-        </li>
-        <li>
-          <a class="chapter" href="#">
-            <span class="chapter__marker">Ipsum</span>
-            <span class="chapter__copy">
-              <span class="chapter__heading">Consectetur adipiscing</span>
-              <span class="chapter__desc">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
-            </span>
-            <svg class="icon chapter__arrow" aria-hidden="true"><use href="#i-arrow-ur"/></svg>
-          </a>
-        </li>
-        <li>
-          <a class="chapter" href="#">
-            <span class="chapter__marker">Dolor</span>
-            <span class="chapter__copy">
-              <span class="chapter__heading">Sed do eiusmod tempor</span>
-              <span class="chapter__desc">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
-            </span>
-            <svg class="icon chapter__arrow" aria-hidden="true"><use href="#i-arrow-ur"/></svg>
-          </a>
-        </li>
-        <li>
-          <a class="chapter" href="#">
-            <span class="chapter__marker">Amet</span>
-            <span class="chapter__copy">
-              <span class="chapter__heading">Ut enim ad minim</span>
-              <span class="chapter__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
-            </span>
-            <svg class="icon chapter__arrow" aria-hidden="true"><use href="#i-arrow-ur"/></svg>
-          </a>
-        </li>
-      </ol>
-    </section>
-
-    <!-- ============ 5. QUOTATION ============ -->
-    <section class="quote">
-      <div class="quote__inner">
-        <blockquote class="quote__body">
-          <span class="quote__mark" aria-hidden="true">“</span>
-          <p class="quote__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam.</p>
-          <footer class="label">Lorem ipsum dolor sit amet</footer>
-        </blockquote>
-
-        <div class="quote__figure">
-          <span class="quote__halo" aria-hidden="true"></span>
-          <img class="quote__img" src="assets/img/seated.png" alt="Mol’bert Epstein seated on a chair">
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 6. PHOTO ARCHIVE ============ -->
-    <section class="archive wrap" id="archive">
-      <div class="archive__head">
-        <div>
-          <p class="label">Lorem ipsum dolor</p>
-          <h2 class="archive__title">Lorem in ipsum.</h2>
-        </div>
-        <a class="link" href="#"><span>Lorem ipsum dolor</span><svg class="icon"><use href="#i-arrow-ur"/></svg></a>
-      </div>
-
-      <div class="archive__strip">
-        <figure class="entry entry--candid">
-          <div class="entry__photo">
-            <img src="assets/img/archive-candid.png" alt="Candid archive photograph">
-          </div>
-          <figcaption class="entry__caption">
-            <span class="label">Lorem ipsum</span>
-            <span class="caption">Dolor sit amet.</span>
-          </figcaption>
-        </figure>
-
-        <figure class="entry entry--playful">
-          <div class="entry__photo">
-            <img src="assets/img/archive-playful.png" alt="Playful archive photograph">
-          </div>
-          <figcaption>
-            <span class="label">Consectetur adipiscing</span>
-            <span class="entry__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</span>
-          </figcaption>
-        </figure>
-
-        <figure class="entry entry--standing">
-          <div class="entry__photo">
-            <span class="entry__accent" aria-hidden="true"></span>
-            <img src="assets/img/standing.png" alt="Mol’bert Epstein standing">
-          </div>
-          <figcaption class="label">Sed do eiusmod</figcaption>
-        </figure>
-      </div>
-      <hr class="rule">
-    </section>
-
-    <!-- ============ 7. FEATURED STORY ============ -->
-    <section class="feature wrap">
-      <div class="feature__text">
-        <p class="label">Lorem ipsum / dolor sit</p>
-        <h2 class="feature__title">Dolor sit.<br>Ipsum amet.<br>Lorem.</h2>
-        <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <a class="link" href="#"><span>Lorem ipsum</span><svg class="icon"><use href="#i-arrow-ur"/></svg></a>
-      </div>
-
-      <figure class="feature__figure">
-        <span class="feature__word" aria-hidden="true">ipsum</span>
-        <span class="feature__orbit" aria-hidden="true"></span>
-        <img class="feature__img" src="assets/img/standing.png" alt="Mol’bert Epstein, full-length portrait">
-        <figcaption class="feature__caption">
-          <span class="label">Lorem ipsum</span>
-          <span class="caption">Dolor sit amet, consectetur.</span>
-        </figcaption>
+    <div class="archive__strip">
+      <figure class="arc arc--candid">
+        <div class="photo"><img src="assets/img/archive-candid.png" alt=""></div>
+        <figcaption class="label"><span>Lorem ipsum</span><span class="muted">Dolor</span></figcaption>
       </figure>
-    </section>
-
-    <!-- ============ 8. JOURNAL ============ -->
-    <section class="journal wrap" id="journal">
-      <hr class="rule">
-      <div class="journal__head">
-        <h2 class="journal__title">Lorem &amp; ipsum.</h2>
-        <p class="label">Lorem ipsum dolor sit amet</p>
-      </div>
-
-      <div class="journal__stories">
-        <article class="story">
-          <div class="story__photo story__photo--sand">
-            <img class="story__img story__img--a" src="assets/img/seated.png" alt="">
-          </div>
-          <p class="label">Lorem ipsum · dolor sit</p>
-          <a class="story__link" href="#">
-            <h3>Lorem ipsum dolor sit amet.</h3>
-            <svg class="icon" aria-hidden="true"><use href="#i-arrow-ur"/></svg>
-          </a>
-          <p class="story__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
-        </article>
-
-        <article class="story">
-          <div class="story__photo story__photo--red">
-            <img class="story__img story__img--b" src="assets/img/portrait-smile.png" alt="">
-          </div>
-          <p class="label">Lorem ipsum · dolor sit</p>
-          <a class="story__link" href="#">
-            <h3>Consectetur adipiscing elit.</h3>
-            <svg class="icon" aria-hidden="true"><use href="#i-arrow-ur"/></svg>
-          </a>
-          <p class="story__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
-        </article>
-
-        <article class="story">
-          <div class="story__photo story__photo--sand">
-            <span class="story__rot"><img src="assets/img/archive-playful.png" alt=""></span>
-          </div>
-          <p class="label">Lorem ipsum · dolor sit</p>
-          <a class="story__link" href="#">
-            <h3>Sed do eiusmod tempor.</h3>
-            <svg class="icon" aria-hidden="true"><use href="#i-arrow-ur"/></svg>
-          </a>
-          <p class="story__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- ============ 9. NEWSLETTER ============ -->
-    <section class="newsletter" id="subscribe">
-      <div class="newsletter__inner wrap">
-        <div class="newsletter__copy">
-          <p class="label">Lorem ipsum dolor</p>
-          <h2 class="newsletter__title">Lorem ipsum,<br>dolor sit amet.</h2>
-        </div>
-
-        <form class="newsletter__form" novalidate>
-          <p class="newsletter__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam.</p>
-          <div class="newsletter__entry">
-            <label class="visually-hidden" for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="Lorem ipsum dolor" autocomplete="email" required>
-            <button class="newsletter__submit" type="submit" aria-label="Subscribe"><svg class="icon"><use href="#i-arrow-ur"/></svg></button>
-          </div>
-          <label class="newsletter__consent">
-            <input type="checkbox" name="consent" required>
-            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-          </label>
-          <p class="newsletter__status" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <!-- ============ 10. FOOTER ============ -->
-  <footer class="footer">
-    <div class="footer__inner wrap">
-      <div class="footer__nav">
-        <p class="label">Lorem ipsum dolor sit</p>
-        <nav class="footer__links" aria-label="Footer">
-          <a href="#">Lorem ipsum</a>
-          <a href="#">Dolor sit</a>
-          <a href="#">Amet</a>
-          <a href="#">Consectetur</a>
-        </nav>
-        <a class="footer__top" href="#top" aria-label="Back to top"><svg class="icon"><use href="#i-arrow-up"/></svg></a>
-      </div>
-
-      <p class="footer__name"><span>Mol’bert</span> <span>Epstein</span></p>
-
-      <hr class="rule rule--dark">
-      <div class="footer__credits">
-        <p class="credit">Lorem ipsum dolor sit amet</p>
-        <p>Lorem ipsum · Dolor sit amet · Consectetur</p>
-      </div>
+      <figure class="arc arc--playful">
+        <div class="photo"><img src="assets/img/archive-playful.png" alt=""></div>
+        <figcaption><span class="label">Lorem ipsum dolor</span><span class="muted small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></figcaption>
+      </figure>
+      <figure class="arc arc--standing">
+        <div class="arc__panel"><div class="photo"><img src="assets/img/standing.png" alt=""></div></div>
+        <figcaption class="label">Lorem ipsum</figcaption>
+      </figure>
     </div>
-  </footer>
+    <hr class="rule">
+  </div>
+</section>
 
-  <script src="js/main.js"></script>
+<!-- ============ 7. FEATURED STORY ============ -->
+<section class="feature">
+  <div class="wrap feature__grid">
+    <div class="feature__text">
+      <p class="label">Lorem ipsum dolor sit</p>
+      <h2 class="feature__title">Lorem ipsum dolor sit amet.</h2>
+      <p class="muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <a class="link" href="#">Lorem ipsum <svg class="ico"><use href="#i-arrow-ur"/></svg></a>
+    </div>
+    <div class="feature__art">
+      <span class="feature__type" aria-hidden="true">Lorem ipsum</span>
+      <div class="orbit"></div>
+      <div class="photo feature__photo"><img src="assets/img/standing.png" alt=""></div>
+      <div class="feature__cap"><p class="label">Lorem ipsum</p><p class="muted small">Dolor sit amet, consectetur.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. JOURNAL ============ -->
+<section class="journal" id="journal">
+  <div class="wrap">
+    <hr class="rule">
+    <div class="journal__head">
+      <h2 class="journal__title">Lorem ipsum dolor</h2>
+      <p class="label">Lorem ipsum / dolor sit</p>
+    </div>
+    <div class="journal__stories">
+      <article class="story">
+        <div class="photo story__photo"><img src="assets/img/archive-candid.png" alt=""></div>
+        <p class="label">Lorem ipsum</p>
+        <a class="story__link" href="#"><h3>Lorem ipsum dolor sit amet consectetur</h3><svg class="ico"><use href="#i-arrow-ur"/></svg></a>
+        <p class="muted small">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.</p>
+      </article>
+      <article class="story">
+        <div class="photo story__photo"><img src="assets/img/portrait-smile.png" alt=""></div>
+        <p class="label">Dolor sit</p>
+        <a class="story__link" href="#"><h3>Sed do eiusmod tempor incididunt ut labore</h3><svg class="ico"><use href="#i-arrow-ur"/></svg></a>
+        <p class="muted small">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+      </article>
+      <article class="story">
+        <div class="photo story__photo"><img src="assets/img/archive-playful.png" alt=""></div>
+        <p class="label">Amet</p>
+        <a class="story__link" href="#"><h3>Duis aute irure dolor</h3><svg class="ico"><use href="#i-arrow-ur"/></svg></a>
+        <p class="muted small">Excepteur sint occaecat cupidatat non proident, sunt in culpa.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. NEWSLETTER ============ -->
+<section class="news" id="about">
+  <div class="wrap news__grid">
+    <div>
+      <p class="label">Lorem ipsum</p>
+      <h2 class="news__title">Lorem ipsum dolor sit amet consectetur.</h2>
+    </div>
+    <form class="news__form" id="news-form" novalidate>
+      <p class="muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <div class="field">
+        <label class="sr" for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="Your email" autocomplete="email" required>
+        <button type="submit" class="field__btn" aria-label="Subscribe"><svg class="ico"><use href="#i-arrow-ur"/></svg></button>
+      </div>
+      <label class="consent small muted"><input type="checkbox" id="consent" required><span class="consent__box"></span> Lorem ipsum dolor sit amet consectetur.</label>
+      <p class="form-msg small" id="form-msg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ 10. FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__nav">
+      <span class="label">Lorem ipsum dolor</span>
+      <ul>
+        <li><a href="#intro">Lorem</a></li>
+        <li><a href="#portrait">Ipsum</a></li>
+        <li><a href="#archive">Dolor</a></li>
+        <li><a href="#journal">Sit amet</a></li>
+      </ul>
+      <a class="round-btn round-btn--sm" href="#top" aria-label="Back to top"><svg class="ico"><use href="#i-arrow-u"/></svg></a>
+    </div>
+    <p class="footer__sign">Mol’bert Epstein</p>
+    <hr class="rule">
+    <div class="footer__credits">
+      <span class="muted small">© Lorem ipsum dolor</span>
+      <span class="muted small">Lorem ipsum dolor sit amet.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
